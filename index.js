@@ -22,6 +22,8 @@ app.set("views",path.resolve("./views"));
 app.use(express.urlencoded({extended:false}));
 app.use(cookieParser());
 app.use(checkForAuthenticationCookie("token"));
+
+//Express, by default does not allow you to serve static files. You need to enable it using the following built-in middleware.
 app.use(express.static(path.resolve('./public')));
 
 app.get('/',async(req,res)=>{
