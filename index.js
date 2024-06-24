@@ -33,6 +33,7 @@ app.get('/',async(req,res)=>{
         blogs:allBlogs,
     });
 })
+
 app.use('/user',userRoute);
 app.use ('/blog',blogRoute);
 app.listen(PORT, () => console.log(`Listening on port ${PORT}!`));
